@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="EntregaFinal2._0_NelOjeda_ListaTareas.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:EntregaFinal2._0_NelOjeda_ListaTareas.WinUI">
+
+</maui:MauiWinUIApplication>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EntregaFinal2._0_NelOjeda_ListaTareas.MVVM.View.PaginaCrear"
+             Title="Crear Tarea">
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <!-- Entrada para el nombre -->
+        <Label Text="Nombre de la tarea:" />
+        <Entry x:Name="NombreEntry" Placeholder="Introduce el nombre" />
+
+        <!-- Entrada para la descripción -->
+        <Label Text="Descripción de la tarea:" />
+        <Editor x:Name="DescripcionEditor" Placeholder="Introduce la descripción" HeightRequest="100" />
+
+        <!-- Botones -->
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Guardar" Clicked="Button_Clicked" />
+            <Button Text="Cancelar" Clicked="Button_Clicked_1" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
