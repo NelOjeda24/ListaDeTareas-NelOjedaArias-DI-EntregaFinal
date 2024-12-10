@@ -2,20 +2,81 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EntregaFinal2._0_NelOjeda_ListaTareas.MVVM.View.PaginaCrear"
-             Title="Crear Tarea">
-    <VerticalStackLayout Padding="20" Spacing="15">
-        <!-- Entrada para el nombre -->
-        <Label Text="Nombre de la tarea:" />
-        <Entry x:Name="NombreEntry" Placeholder="Introduce el nombre" />
+             Title="Crear Tarea"
+             xmlns:viewmodel="clr-namespace:EntregaFinal2._0_NelOjeda_ListaTareas.MVVM.ViewModels">
 
-        <!-- Entrada para la descripción -->
-        <Label Text="Descripción de la tarea:" />
-        <Editor x:Name="DescripcionEditor" Placeholder="Introduce la descripción" HeightRequest="100" />
+    <ContentPage.BindingContext>
+        <viewmodel:TareaViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="20" BackgroundColor="#f8f9fa">
+        <!-- Título de la página -->
+        <Label Text="Nueva Tarea"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#333" />
+
+        <!-- Contenedor de entrada -->
+        <Frame CornerRadius="10"
+               Padding="15"
+               BackgroundColor="White"
+               BorderColor="#ddd">
+            <VerticalStackLayout Spacing="15">
+                <!-- Entrada para el nombre -->
+                <Label Text="Nombre de la tarea:"
+                       FontSize="16"
+                       TextColor="#333" />
+                <Frame CornerRadius="5"
+                       Padding="0"
+                       BorderColor="#ddd">
+                    <Entry x:Name="NombreEntry"
+                           Placeholder="Introduce el nombre"
+                           FontSize="14"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="#aaa"
+                           TextColor="#333" />
+                </Frame>
+
+                <!-- Entrada para la descripción -->
+                <Label Text="Descripción de la tarea:"
+                       FontSize="16"
+                       TextColor="#333" />
+                <Frame CornerRadius="5"
+                       Padding="0"
+                       BorderColor="#ddd">
+                    <Editor x:Name="DescripcionEditor"
+                            Placeholder="Introduce la descripción"
+                            FontSize="14"
+                            BackgroundColor="Transparent"
+                            PlaceholderColor="#aaa"
+                            TextColor="#333"
+                            HeightRequest="100" />
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
 
         <!-- Botones -->
         <HorizontalStackLayout Spacing="10">
-            <Button Text="Guardar" Clicked="Button_Clicked" />
-            <Button Text="Cancelar" Clicked="Button_Clicked_1" />
+            <!-- Botón Guardar -->
+            <Button Text="Guardar"
+                    FontSize="16"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Button_Clicked" />
+
+            <!-- Botón Cancelar -->
+            <Button Text="Cancelar"
+                    FontSize="16"
+                    BackgroundColor="#F44336"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="10"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Button_Clicked_1" />
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
